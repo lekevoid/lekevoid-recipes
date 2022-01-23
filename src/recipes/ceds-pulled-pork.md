@@ -9,7 +9,7 @@ categories:
 origin: non_specific
 ingredients:
   - name: Pork, ideally shoulder
-    measure: whole
+    measure: kg
     quantity: "1.5"
     comment: Cut in fist-sized pieces to facilitate cooking
   - name: Onion, minced
@@ -29,6 +29,6 @@ ingredients:
     measure: cup
   - name: Tomato paste
     quantity: 1/3
-    measure: cup
+    measure: can
 preparation_steps: Blah
 ---

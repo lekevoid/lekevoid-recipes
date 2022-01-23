@@ -53,9 +53,13 @@ collections:
                 - {
                       label: "Measure",
                       name: "measure",
-                      widget: "select",
-                      options: ["Whole", "Some", "kg", "g", "lb", "cup", "tbsp", "tsp", "Pinch", "Can"],
-                      required: false,
+                      widget: "relation",
+                      collection: recipes_measurement_units,
+                      file: "recipes_measurement_units",
+                      search_fields: ["items.*.slug"],
+                      value_field: "items.*.slug",
+                      display_fields: ["items.*.name"],
+                      required: true,
                   }
                 - { label: "Comment", name: "comment", widget: "string", required: false }
           - { label: "Preparation", name: "preparation_steps", widget: "markdown" }

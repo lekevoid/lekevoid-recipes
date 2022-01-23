@@ -19,3 +19,5 @@ items:
     slug: pinch
   - name: Can
     slug: can
+  - name: Drop
+    slug: drop

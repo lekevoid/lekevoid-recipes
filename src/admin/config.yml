@@ -34,20 +34,14 @@ collections:
             required: false
           - label: "Origin"
             name: "origin"
-            widget: "select"
+            widget: "relation"
+            multiple: false
+            collection: recipes_attributes
+            file: "recipes_origins"
+            search_fields: ["items.*.slug"]
+            value_field: "items.*.slug"
+            display_fields: ["items.*.name"]
             required: false
-            options:
-                - { value: "non_specific", label: "Non-Specific" }
-                - { value: "chinese", label: "Chinese" }
-                - { value: "european", label: "European" }
-                - { value: "indian", label: "Indian" }
-                - { value: "japanese", label: "Japanese" }
-                - { value: "korean", label: "Korean" }
-                - { value: "morroccan", label: "Morroccan" }
-                - { value: "russian", label: "Russian" }
-                - { value: "south_american", label: "South American" }
-                - { value: "swedish", label: "Swedish" }
-                - { value: "thai", label: "Thai" }
           - label: "Ingredients"
             name: "ingredients"
             widget: "list"
@@ -93,28 +87,22 @@ collections:
                   name: items
                   widget: list
                   allow_add: true
-                  collapsed: false
+                  collapsed: true
                   fields:
                       - { label: Name, name: name, widget: string }
                       - { label: Slug, name: slug, widget: string }
           - label: "Origins"
-            name: "origins"
+            name: "recipes_origins"
             file: "src/_data/recipes_origins.yaml"
             fields:
                 - label: Origins
                   name: items
                   widget: list
-                  collapsed: false
+                  allow_add: true
+                  collapsed: true
                   fields:
                       - { label: Name, name: name, widget: string }
                       - { label: Slug, name: slug, widget: string }
-          - label: "Meta Settings"
-            name: "settings"
-            file: "src/_data/settings.yaml"
-            fields:
-                - { label: Name, name: name, widget: string }
-                - { label: Author, name: author, widget: string }
-                - { label: URL, name: url, widget: string }
     - label: "Settings"
       name: "settings"
       editor:

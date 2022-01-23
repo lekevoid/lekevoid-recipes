@@ -18,9 +18,9 @@ collections:
       fields:
           - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Feature Image", name: "feature_image", widget: "image" }
-          - { label: "Time to make (minutes)", name: "time", widget: "number" }
-          - { label: "Complexity", name: "complexity", widget: "number", min: 1, max: 3 }
+          - { label: "Feature Image", name: "feature_image", widget: "image", required: false }
+          - { label: "Time to make (minutes)", name: "time", widget: "number", required: false }
+          - { label: "Complexity", name: "complexity", widget: "number", min: 1, max: 3, required: false }
           - label: "Categories"
             name: "categories"
             widget: "select"
@@ -42,6 +42,7 @@ collections:
                 - { value: "european", label: "European" }
                 - { value: "indian", label: "Indian" }
                 - { value: "japanese", label: "Japanese" }
+                - { value: "korean", label: "Korean" }
                 - { value: "morroccan", label: "Morroccan" }
                 - { value: "russian", label: "Russian" }
                 - { value: "south_american", label: "South American" }
@@ -52,10 +53,10 @@ collections:
             widget: "list"
             allow_add: true
             fields:
+                - { label: "Name", name: "name", widget: "string" }
                 - { label: "Quantity", name: "quantity", widget: "string" }
                 - { label: "Measure", name: "measure", widget: "select", options: ["whole", "cup", "tbsp", "tsp"] }
-                - { label: "Name", name: "name", widget: "string" }
-                - { label: "Comment", name: "comment", widget: "string" }
+                - { label: "Comment", name: "comment", widget: "string", required: false }
           - { label: "Preparation", name: "preparation_steps", widget: "markdown" }
           - label: "Tags"
             name: "tags"

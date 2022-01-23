@@ -29,7 +29,7 @@ ingredients:
     measure: cup
   - name: Tomato paste
     quantity: 1/3
-    measure: Can
+    measure: can
   - name: Chili powder
     quantity: "2"
     measure: tbsp

@@ -24,8 +24,8 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
           - label: "Ingredients"
             name: "ingredients"
-            widget: "object"
-            collapsed: false
+            widget: "list"
+            allow_add: true
             fields:
                 - { label: "Quantity", name: "quantity", widget: "string" }
                 - { label: "Measure", name: "measure", widget: "select", options: ["whole", "cup", "tbsp", "tsp"] }

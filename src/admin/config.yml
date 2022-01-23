@@ -26,6 +26,7 @@ collections:
             name: "categories"
             widget: "select"
             multiple: true
+            required: false
             options:
                 - { value: "breads", label: "Breads" }
                 - { value: "dessert", label: "Dessert" }
@@ -37,6 +38,7 @@ collections:
           - label: "Origin"
             name: "origin"
             widget: "select"
+            required: false
             options:
                 - { value: "non_specific", label: "Non-Specific" }
                 - { value: "chinese", label: "Chinese" }
@@ -53,6 +55,7 @@ collections:
             name: "ingredients"
             widget: "list"
             allow_add: true
+            required: false
             fields:
                 - { label: "Name", name: "name", widget: "string" }
                 - { label: "Quantity", name: "quantity", widget: "string" }
@@ -62,6 +65,7 @@ collections:
           - label: "Tags"
             name: "tags"
             widget: "select"
+            required: false
             options:
                 - { value: "meat", label: "Meat" }
                 - { value: "vegan", label: "Vegan" }
@@ -70,6 +74,7 @@ collections:
             name: "reference"
             widget: "list"
             allow_add: true
+            required: false
             fields:
                 - { label: "Link", name: "link", widget: "string" }
     - label: "Settings"

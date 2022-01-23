@@ -1,8 +1,8 @@
 items:
-  - name: Whole
-    slug: whole
   - name: Some
     slug: some
+  - name: Whole
+    slug: whole
   - name: kg
     slug: kg
   - name: g

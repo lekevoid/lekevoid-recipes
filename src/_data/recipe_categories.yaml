@@ -1,0 +1,19 @@
+items:
+  - name: Bread
+    slug: bread
+  - name: Condiment
+    slug: condiment
+  - name: Dessert
+    slug: dessert
+  - slug: jerky
+    name: Jerky
+  - slug: main-course
+    name: Main Course
+  - slug: salad
+    name: Salad
+  - slug: side-dish
+    name: Side Dish
+  - slug: smoothie
+    name: Smoothie
+  - slug: soup
+    name: Soup

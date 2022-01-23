@@ -1,3 +1,7 @@
 div[id*="ingredients"] {
 	background-color: red;
 }
+
+#ingredients-field-6 {
+	background-color: blue;
+}

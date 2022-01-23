@@ -78,6 +78,7 @@ collections:
             required: false
             fields:
                 - { label: "Link", name: "link", widget: "string" }
+          - { label: "Notes", name: "notes", widget: "text", required: false }
     - label: "Recipes attributes"
       name: "recipes_attributes"
       editor:

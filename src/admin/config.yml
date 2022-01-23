@@ -4,7 +4,7 @@ backend:
     repo: lekevoid/lekevoid-recipes
 media_folder: "src/static/img"
 public_folder: "/static/img"
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
@@ -25,11 +25,12 @@ collections:
           - label: "Categories"
             name: "categories"
             widget: "relation"
+            multiple: true
             collection: recipes_attributes
             file: "recipes_categories"
-            search_fields: ["items.slug"]
-            value_field: "items.slug"
-            display_fields: ["items.name"]
+            search_fields: ["items.*.slug"]
+            value_field: "items.*.slug"
+            display_fields: ["items.*.name"]
             required: false
           - label: "Origin"
             name: "origin"

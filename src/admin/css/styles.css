@@ -11,11 +11,9 @@
 }
 
 [id*="ingredients"] [class*="ControlContainer"] input,
-[id*="ingredients"] [class*="ControlContainer"] [class*="-control"] {
-}
+[id*="ingredients"] [class*="ControlContainer"] [class*="-control"] {}
 
-[id*="ingredients"] [class*="ControlContainer"] [class*="-control"]>div {
-}
+[id*="ingredients"] [class*="ControlContainer"] [class*="-control"]>div {}
 
 [id*="ingredients"] [class*="ControlContainer"]:nth-of-type(1) {
 	margin-top: 16px;

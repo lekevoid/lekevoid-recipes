@@ -4,6 +4,7 @@ backend:
     repo: lekevoid/lekevoid-recipes
 media_folder: "src/static/img"
 public_folder: "/static/img"
+publish_mode: editorial_workflow
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true

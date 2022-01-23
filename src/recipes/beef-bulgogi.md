@@ -32,8 +32,8 @@ ingredients:
     measure: tsp
     name: Asian spicy pepper-garlic sauce
     comment: or anything else that's spicy
-  - measure: whole
-    quantity: "1"
+  - measure: some
+    quantity: ""
     name: Sesame seeds and/or green onions, to decorate
     comment: aaa
 preparation_steps: |-

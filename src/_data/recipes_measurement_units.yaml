@@ -1,0 +1,21 @@
+items:
+  - name: Whole
+    slug: whole
+  - name: Some
+    slug: some
+  - name: kg
+    slug: kg
+  - name: g
+    slug: g
+  - name: lb
+    slug: lb
+  - name: cup
+    slug: cup
+  - name: tbsp
+    slug: tbsp
+  - name: tsp
+    slug: tsp
+  - name: Pinch
+    slug: pinch
+  - name: Can
+    slug: can

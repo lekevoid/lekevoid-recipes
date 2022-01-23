@@ -26,8 +26,10 @@ collections:
             name: "categories"
             widget: "relation"
             collection: recipes_attributes
-            search_fields: ["categories"]
+            file: "recipes_categories"
+            search_fields: ["items.slug"]
             value_field: "items.slug"
+            display_fields: ["items.name"]
             required: false
           - label: "Origin"
             name: "origin"
@@ -83,7 +85,7 @@ collections:
           preview: false
       files:
           - label: "Categories"
-            name: "categories"
+            name: "recipes_categories"
             file: "src/_data/recipes_categories.yaml"
             fields:
                 - label: Categories

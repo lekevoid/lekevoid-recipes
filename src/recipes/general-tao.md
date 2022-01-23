@@ -5,7 +5,7 @@ feature_image: /static/img/65768371-c1ce-469b-97ec-9dd0e1271283.jpeg
 time: 20
 complexity: 1
 categories:
-  - main_course
+  - main-course
 origin: chinese
 ingredients:
   - name: Hoisin sauce

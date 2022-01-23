@@ -37,7 +37,7 @@ ingredients:
     measure: tsp
   - name: Liquid Smoke
     quantity: "4"
-    measure: pinch
+    measure: drop
   - name: Pink salt
     quantity: "1"
     measure: pinch

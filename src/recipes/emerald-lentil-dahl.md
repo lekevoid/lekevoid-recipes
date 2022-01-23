@@ -6,7 +6,12 @@ time: 40
 complexity: 2
 categories:
   - main-course
+origin: indian
 ingredients:
+  - name: Lentils (cooked)
+    comment: Black or French green are best, but any will do
+    quantity: "4"
+    measure: cup
   - name: Spinach, fresh or frozen
     comment: i.e., half a big pack of frozen chopped spinach
     quantity: "1"
@@ -38,38 +43,42 @@ ingredients:
   - name: Plain yogurt
     quantity: 1/2
     measure: cup
-  - name: Lentils (cooked)
-    comment: Black or French green are best, but any will do
-    quantity: "4"
-    measure: cup
   - name: Butter, to cook the onion
     measure: some
 preparation_steps: >-
-  Start the rice.
+  ## Before anything
 
 
-  ### Lentils
+  * Start the rice.
+
+  * Rinse thoroughly to remove dirt. Boil in salted water for 20-30 minutes, then strain.
 
 
-  Rinse thoroughly to remove dirt. Boil in salted water for 20-30 minutes, then strain.
+  ## Spinach sauce
 
 
-  ### Spinach sauce
+  1. Sautee the **onion** in butter, over medium heat for 3-4 minutes, then add **garlic**, **ginger** and **chilies**.
+
+  2. Add the **mustard**, **cumin** and **garam masala** and stir two minutes. Lower heat to low.
+
+  3. Add the **spinach**, **mint** and **water**. Cover pan, 2-3 minutes, letting spinach wilt. Give a few stirs.
+
+  4. When spinach is wilted, blend a few times to smoothen a little. Add water if necessary, up to ¾ cups.
+
+  5. Put together **spinach mix**, **lentils** and **yogurt**. Serve.
 
 
-  Sautee the **onion** in butter, over medium heat for 3-4 minutes, then add **garlic**, **ginger** and **chilies**.
+  ## Sides
 
 
-  Add the **mustard**, **cumin** and **garam masala** and stir two minutes. Lower heat to low. Add the spinach, mint and water. Cover pan, 2-3 minutes, letting spinach wilt. Give a few stirs.
+  Recommended with any or all of :
 
 
-  When spinach is wilted, blend a few times to smoothen a little. Add water if necessary, up to ¾ cups.
+  * White rice
 
+  * Naan bread
 
-  ### Assemble
-
-
-  Put together spinach mix, lentils and yogurt. Serve.
+  * Sweet & limey yogurt sauce
 tags: vegan
 reference:
   - link: https://www.feastingathome.com/lentil-dal-with-spinach/

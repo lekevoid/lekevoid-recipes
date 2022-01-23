@@ -1,0 +1,25 @@
+items:
+  - slug: non-specific
+    name: Non-Specific
+  - name: Caribbean
+    slug: caribbean
+  - slug: chinese
+    name: Chinese
+  - name: Indian
+    slug: indian
+  - name: Japanese
+    slug: japanese
+  - name: Korean
+    slug: korean
+  - name: Morroccan
+    slug: morroccan
+  - name: Russian
+    slug: russian
+  - name: South American
+    slug: south-american
+  - name: Swedish
+    slug: swedish
+  - name: Thai
+    slug: thai
+  - name: Vietnamese
+    slug: vietnamese

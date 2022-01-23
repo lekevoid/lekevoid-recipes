@@ -28,13 +28,15 @@ collections:
             multiple: true
             required: false
             options:
-                - { value: "breads", label: "Breads" }
+                - { value: "breads", label: "Bread" }
+                - { value: "condiment", label: "Condiment" }
                 - { value: "dessert", label: "Dessert" }
-                - { value: "main_courses", label: "Main Courses" }
-                - { value: "salads", label: "Salads" }
-                - { value: "side_dishes", label: "Side Dishes" }
-                - { value: "smoothies", label: "Smoothies" }
-                - { value: "soups", label: "Soups" }
+                - { value: "jerky", label: "Jerky" }
+                - { value: "main_course", label: "Main Course" }
+                - { value: "salad", label: "Salads" }
+                - { value: "side_dish", label: "Side Dish" }
+                - { value: "smoothie", label: "Smoothie" }
+                - { value: "soup", label: "Soup" }
           - label: "Origin"
             name: "origin"
             widget: "select"

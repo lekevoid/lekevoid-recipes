@@ -42,7 +42,7 @@ ingredients:
     measure: tsp
   - name: 5 spices
     quantity: "1"
-    measure: Pinch
+    measure: pinch
 preparation_steps: >-
   1. Mix all ingredients, except the corn starch, into a pot. Heat up until it
   just starts bubbling.

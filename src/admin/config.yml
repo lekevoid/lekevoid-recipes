@@ -54,7 +54,7 @@ collections:
                       label: "Measure",
                       name: "measure",
                       widget: "relation",
-                      collection: recipes_measurement_units,
+                      collection: recipes_attributes,
                       file: "recipes_measurement_units",
                       search_fields: ["items.*.slug"],
                       value_field: "items.*.slug",

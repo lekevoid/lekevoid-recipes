@@ -59,7 +59,7 @@ collections:
             fields:
                 - { label: "Name", name: "name", widget: "string" }
                 - { label: "Quantity", name: "quantity", widget: "string" }
-                - { label: "Measure", name: "measure", widget: "select", options: ["whole", "cup", "tbsp", "tsp"] }
+                - { label: "Measure", name: "measure", widget: "select", options: ["whole", "kg", "g", "lb", "cup", "tbsp", "tsp", "can"] }
                 - { label: "Comment", name: "comment", widget: "string", required: false }
           - { label: "Preparation", name: "preparation_steps", widget: "markdown" }
           - label: "Tags"

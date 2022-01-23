@@ -19,7 +19,7 @@ collections:
           - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Feature Image", name: "feature_image", widget: "image" }
-          - { label: "Time to make", name: "time", widget: "string" }
+          - { label: "Time to make (minutes)", name: "time", widget: "number" }
           - { label: "Complexity", name: "complexity", widget: "number", min: 1, max: 3 }
           - label: "Ingredients"
             name: "ingredients"

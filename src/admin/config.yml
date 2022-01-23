@@ -85,6 +85,41 @@ collections:
             required: false
             fields:
                 - { label: "Link", name: "link", widget: "string" }
+    - label: "Recipes attributes"
+      name: "recipes_attributes"
+      editor:
+          preview: false
+      files:
+          - label: "Categories"
+            name: "categories"
+            file: "src/_data/recipe_categories.yaml"
+            fields:
+                - label: Categories
+                  name: items
+                  widget: list
+                  allow_add: true
+                  collapsed: false
+                  fields:
+                      - { label: Name, name: name, widget: string }
+                      - { label: Slug, name: slug, widget: string }
+          - label: "Origins"
+            name: "origins"
+            file: "src/_data/recipes_origins.yaml"
+            fields:
+                - label: Origins
+                  name: items
+                  widget: list
+                  collapsed: false
+                  fields:
+                      - { label: Name, name: name, widget: string }
+                      - { label: Slug, name: slug, widget: string }
+          - label: "Meta Settings"
+            name: "settings"
+            file: "src/_data/settings.yaml"
+            fields:
+                - { label: Name, name: name, widget: string }
+                - { label: Author, name: author, widget: string }
+                - { label: URL, name: url, widget: string }
     - label: "Settings"
       name: "settings"
       editor:

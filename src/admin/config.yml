@@ -57,6 +57,13 @@ collections:
                 - { label: "Name", name: "name", widget: "string" }
                 - { label: "Comment", name: "comment", widget: "string" }
           - { label: "Preparation", name: "preparation_steps", widget: "markdown" }
+          - label: "Tags"
+            name: "tags"
+            widget: "select"
+            options:
+                - { value: "meat", label: "Meat" }
+                - { value: "vegan", label: "Vegan" }
+                - { value: "vegetarian", label: "Vegetarian" }
           - label: "Reference Links"
             name: "reference"
             widget: "list"

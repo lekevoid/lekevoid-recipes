@@ -1,7 +1,20 @@
 [id*="ingredients"] [class*="ListItem"] {}
 
+[id*="ingredients"] [class*="NestedObjectLabel"] {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	text-transform: capitalize;
+}
+
 [id*="ingredients"] [class*="ControlContainer"] {
 	display: inline-block;
+}
+
+[id*="ingredients"] [class*="ControlContainer"] input,
+[id*="ingredients"] [class*="ControlContainer"] [class*="-control"] {
+}
+
+[id*="ingredients"] [class*="ControlContainer"] [class*="-control"]>div {
 }
 
 [id*="ingredients"] [class*="ControlContainer"]:nth-of-type(1) {

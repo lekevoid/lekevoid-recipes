@@ -24,19 +24,11 @@ collections:
           - { label: "Complexity", name: "complexity", widget: "number", min: 1, max: 3, required: false }
           - label: "Categories"
             name: "categories"
-            widget: "select"
-            multiple: true
+            widget: "relation"
+            collection: recipes_attributes
+            search_fields: ["categories"]
+            value_field: "categories.slug"
             required: false
-            options:
-                - { value: "breads", label: "Bread" }
-                - { value: "condiment", label: "Condiment" }
-                - { value: "dessert", label: "Dessert" }
-                - { value: "jerky", label: "Jerky" }
-                - { value: "main_course", label: "Main Course" }
-                - { value: "salad", label: "Salads" }
-                - { value: "side_dish", label: "Side Dish" }
-                - { value: "smoothie", label: "Smoothie" }
-                - { value: "soup", label: "Soup" }
           - label: "Origin"
             name: "origin"
             widget: "select"

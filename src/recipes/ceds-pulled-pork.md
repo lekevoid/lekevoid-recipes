@@ -29,6 +29,28 @@ ingredients:
     measure: cup
   - name: Tomato paste
     quantity: 1/3
-    measure: can
-preparation_steps: Blah
+    measure: Can
+  - name: Chili powder
+    quantity: "2"
+    measure: tbsp
+  - name: Garlic powder
+    quantity: "1"
+    measure: tbsp
+  - name: Mustard powder
+    quantity: "1"
+    measure: tbsp
+  - name: Thyme
+    quantity: "1"
+    measure: tbsp
+  - name: Salt flower
+    quantity: "1"
+    measure: tsp
+preparation_steps: >-
+  Place everything in slow cooker, trying to drown the meat in the sauce.
+
+
+  Cook on low for 8 hours.
+
+
+  Sauce may be a bit liquidy when retiring the meat, feel free to thicken by any means necessary.
 ---

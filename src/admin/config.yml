@@ -21,7 +21,15 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Feature Image", name: "feature_image", widget: "image", required: false }
           - { label: "Time to make (minutes)", name: "time", widget: "number", required: false }
-          - { label: "Complexity", name: "complexity", widget: "number", min: 1, max: 3, required: false }
+          - label: "Complexity"
+            name: "complexity"
+            widget: "select"
+            options:
+                - { label: "Easy peezy", value: 1 }
+                - { label: "Requires some thought and/or prep", value: 2 }
+                - { label: "Ready Player One !", value: 3 }
+                - { label: "Why do you hurt yourself this way...", value: 4 }
+            required: false
           - label: "Categories"
             name: "categories"
             widget: "relation"

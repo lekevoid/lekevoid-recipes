@@ -91,6 +91,18 @@ collections:
                   fields:
                       - { label: Name, name: name, widget: string }
                       - { label: Slug, name: slug, widget: string }
+          - label: "Measurement Units"
+            name: "recipes_measurement_units"
+            file: "src/_data/recipes_measurement_units.yaml"
+            fields:
+                - label: Units
+                  name: items
+                  widget: list
+                  allow_add: true
+                  collapsed: true
+                  fields:
+                      - { label: Name, name: name, widget: string }
+                      - { label: Slug, name: slug, widget: string }
           - label: "Origins"
             name: "recipes_origins"
             file: "src/_data/recipes_origins.yaml"

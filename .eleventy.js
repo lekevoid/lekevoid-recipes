@@ -4,6 +4,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
 const pluginSass = require("eleventy-plugin-sass");
+const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
 	// Disable automatic use of your .gitignore
@@ -21,7 +22,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(syntaxHighlight);
 
 	// Add SASS support
-	const sassPluginOptions = {};
+	const sassPluginOptions = { watch: ["./src/static/css/**/*.{scss,sass}"], outputDir: "./_site/static/css/" };
 	eleventyConfig.addPlugin(pluginSass, sassPluginOptions);
 
 	// To Support .yaml Extension in _data

@@ -3,7 +3,9 @@
         class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
         <!--Logo etc-->
         <div class="flex items-center">
-            <a href="/" class="text-indigo-500 font-bold text-lg" x-html="isOpen"></a>
+            <a href="/" class="text-indigo-500 font-bold text-lg">
+                <img src="static/img/coeus_chef.png"/>
+            </a>
         </div>
         <!--Toggle button (hidden on large screens)-->
         <button @click="isOpen = !isOpen" type="button" class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">

@@ -25,3 +25,39 @@ path: home
         </p>
         {% include "./_includes/partials/content.njk" %} #}
 </div>
+
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('thumbnail', (categories=[], ingredients=[], title="") => {
+			// console.log(categories, ingredients.flat(), title)
+			console.log(`"${filterText}"`, Object.values(filterCategories))
+
+			const searchableText = `${ingredients.map(i => i.name).join(" ")} ${title}`.toLowerCase().replace(/[\W]+/g, " ");
+			const _filterText = filterText.toLowerCase();
+
+			const categoriesMatch = !!categories.find(cat => Object.values(filterCategories).includes(cat));
+			const textMatch = (_filterText !== '' && searchableText.includes(_filterText) ? true : false);
+
+			return {
+				get isVisible() {
+					// If a category is selected, show only the recipes that also match the search box.
+					// If the search box is empty, ignore it and show all recipes in the category.
+					if (filterCategories.length > 0 && categoriesMatch) {
+						if (_filterText === '' || textMatch) {
+							return true;
+						}
+					}
+
+					if (filterCategories.length === 0) {
+						if (_filterText === '' || textMatch) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+			}
+		})
+    })
+</script>

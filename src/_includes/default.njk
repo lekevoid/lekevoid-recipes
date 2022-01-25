@@ -20,20 +20,23 @@
     </head>
     <body>
         <div id="global" class="pb-24">
-            <div
-                class="flex flex-row flex-wrap" x-data="{filterCategories:[], filterText:''}">
-                {# <div class="flex flex-row flex-wrap" x-data="{filterCategories:['main-course'], filterText:''}"> #}
+            <div class="flex flex-row flex-wrap">
                 {% include "./partials/navbar.njk" %}
                 <div class="flex w-full px-0 lg:pl-48 lg:pr-12 2xl:pl-24">
                     {{ content | safe }}
                 </div>
             </div>
             {% include "./partials/footer.njk" %}
-            {% if path == "home" %}<!-- Netlify Identity Widget -->
-                <!-- Needed only if you are using Netlify Identity feature -->
-                {# <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer> </script> #}
-            {% endif %}
         </div>
         <script src="/static/js/alpine.js" defer></script>
     </body>
+
+	<script>
+		document.addEventListener('alpine:init', () => {
+			Alpine.store('filters', {
+				categories: [],
+				text: []
+			})
+		})
+	</script>
 </html>

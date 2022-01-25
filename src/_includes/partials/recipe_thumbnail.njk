@@ -1,48 +1,25 @@
-<div class="card recipe_thumbnail" x-data="{
-    		categories: '{{ recipe.data.categories }}'.split(','),
-    		searchableText: '{% for ingr in recipe.data.ingredients %}{{ ingr.name }} {% endfor %}',
-    		get isVisible() {
-    			const _searchableText = this.searchableText.toLowerCase();
-    			const _filterText = filterText.toLowerCase();
-    			const _title = `{{ recipe.data.title.toLowerCase() }}`;
-    
-    			if (!!this.categories.find(cat => filterCategories.includes(cat))) {
-    				if (_filterText === '' || _searchableText.includes(_filterText)) {
-    					return true;
-    				}
-    			}
-    
-    			if (_filterText !== '') {
-    				if (_searchableText.includes(_filterText)) {
-    					return true;
-    				}
-    
-    				if (_title.includes(_searchableText)) {
-    					return true;
-    				}
-    			}
-    
-    			return false;
-    		}
-    	}" x-show="isVisible">
-    <a href="/" style="background:transparent none;">
-        <img src="{{ recipe.data.feature_image }}" alt="{{ recipe.data.title }}" class="object-cover h-32 w-full"/>
-        <div class="card-body p-2">
-            <h4 class="card-title text-lg">{{ recipe.data.title }}</h4>
-            <div class="grid grid-cols-2">
-                {% if recipe.data.time %}
-                    <h5 class="card-subtitle" title="Required Time">⏱
-                        {{ recipe.data.time }}
-                        mins</h5>
-                {% endif %}
-                {% if recipe.data.complexity %}
-                    <h5 class="card-subtitle" title="Complexity">📐
-                        {{ recipe.data.complexity }}
-                    </h5>
-                {% endif %}
-            </div>
-            {# <p class="card-text"></p> #}
-            {# <button>Let me go here!</button> #}
-        </div>
-    </a>
+<div x-data="{filterCategories,filterText}" x-init="$watch('filterText')">
+	<div class="card recipe_thumbnail" x-data="thumbnail({{recipe.data.categories | dump}}, {{recipe.data.ingredients | dump}}, `{{recipe.data.title}}`, filterCategories, filterText)" x-show="isVisible">
+		<a href="/" style="background:transparent none;">
+			<img src="{{ recipe.data.feature_image }}" alt="{{ recipe.data.title }}" class="object-cover h-32 w-full"/>
+			<div class="card-body p-2">
+				<h4 class="card-title text-lg">{{ recipe.data.title }}</h4>
+				<div class="grid grid-cols-2">
+					{% if recipe.data.time %}
+						<h5 class="card-subtitle" title="Required Time">⏱
+							{{ recipe.data.time }}
+							mins</h5>
+					{% endif %}
+					{% if recipe.data.complexity %}
+						<h5 class="card-subtitle" title="Complexity">📐
+							{{ recipe.data.complexity }}
+						</h5>
+					{% endif %}
+				</div>
+				{# <p class="card-text"></p> #}
+				{# <button>Let me go here!</button> #}
+			</div>
+		</a>
+	</div>
 </div>
+

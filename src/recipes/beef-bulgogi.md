@@ -5,7 +5,7 @@ feature_image: /static/img/e5aa9674-b9c6-40a7-b97f-5240fa860df9.jpeg
 time: 30
 complexity: 1
 categories:
-  - main_courses
+  - main-course
 origin: chinese
 ingredients:
   - quantity: "1"

@@ -10,6 +10,9 @@ path: home
             {{ title }}
         </strong>
     </h1>
+	<div class="w-full">
+		<input type="text" x-model="filterText" class="w-full mb-6" placeholder="Search recipes..." />
+	</div>
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 w-full">
         {% for recipe in recipeslist %}
 			{% include 'partials/recipe_thumbnail.njk' %}

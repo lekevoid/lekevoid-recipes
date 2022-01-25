@@ -1,4 +1,30 @@
-<div class="card recipe_thumbnail" x-data="{categories:'{{ recipe.data.categories }}'.split(',')}" x-show="!!categories.find(cat => filterCategories.includes(cat))">
+<div class="card recipe_thumbnail" x-data="{
+    		categories: '{{ recipe.data.categories }}'.split(','),
+    		searchableText: '{% for ingr in recipe.data.ingredients %}{{ ingr.name }} {% endfor %}',
+    		get isVisible() {
+    			const _searchableText = this.searchableText.toLowerCase();
+    			const _filterText = filterText.toLowerCase();
+    			const _title = `{{ recipe.data.title.toLowerCase() }}`;
+    
+    			if (!!this.categories.find(cat => filterCategories.includes(cat))) {
+    				if (_filterText === '' || _searchableText.includes(_filterText)) {
+    					return true;
+    				}
+    			}
+    
+    			if (_filterText !== '') {
+    				if (_searchableText.includes(_filterText)) {
+    					return true;
+    				}
+    
+    				if (_title.includes(_searchableText)) {
+    					return true;
+    				}
+    			}
+    
+    			return false;
+    		}
+    	}" x-show="isVisible">
     <a href="/" style="background:transparent none;">
         <img src="{{ recipe.data.feature_image }}" alt="{{ recipe.data.title }}" class="object-cover h-32 w-full"/>
         <div class="card-body p-2">

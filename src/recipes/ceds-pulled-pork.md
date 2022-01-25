@@ -5,7 +5,7 @@ feature_image: /static/img/instant-pot-pulled-pork-1200-3049.jpg
 time: 680
 complexity: 2
 categories:
-  - main_courses
+  - main-course
 origin: non_specific
 ingredients:
   - name: Pork, ideally shoulder

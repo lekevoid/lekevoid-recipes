@@ -12,23 +12,26 @@
         {% endif %}
         {% block head %}{% endblock %}
         <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/paper.css" lazyload/>
         <link rel="stylesheet" type="text/css" href="/static/css/global.css" lazyload/>
         {% if prism == true %}
             <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
         {% endif %}
     </head>
     <body>
-        <div class="flex flex-row flex-wrap">
-            {% include "./partials/navbar.njk" %}
-            <div class="flex w-full">
-                {{ content | safe }}
+        <div id="global" class="pb-24">
+            <div class="flex flex-row flex-wrap" x-data="{filterCategories:['main-course']}">
+                {% include "./partials/navbar.njk" %}
+                <div class="flex w-full">
+                    {{ content | safe }}
+                </div>
             </div>
+            {% include "./partials/footer.njk" %}
+            {% if path == "home" %}<!-- Netlify Identity Widget -->
+                <!-- Needed only if you are using Netlify Identity feature -->
+                {# <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer> </script> #}
+            {% endif %}
         </div>
-        {% include "./partials/footer.njk" %}
-        {% if path == "home" %}<!-- Netlify Identity Widget -->
-            <!-- Needed only if you are using Netlify Identity feature -->
-            {# <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer> </script> #}
-        {% endif %}
         <script src="/static/js/alpine.js" defer></script>
     </body>
 </html>

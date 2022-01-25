@@ -3,20 +3,22 @@ layout: default
 title: LeKevoid's Recipes
 path: home
 ---
-
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
-  <h1>
-    Welcome to
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
-    </strong>
-  </h1>
-
-  <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-    Starter Template. Get Started by editing.
-    <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-  </p>
-
-  {% include "./_includes/partials/content.njk" %}
+<div class="container mx-auto lg:h-screen flex flex-col justify-start items-center">
+	{% set recipeslist = collections.recipes %}
+    <h1 class="mt-0">
+        <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-800 to-pink-500">
+            {{ title }}
+        </strong>
+    </h1>
+    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 w-full">
+        {% for recipe in recipeslist %}
+			{% include 'partials/recipe_thumbnail.njk' %}
+        {% endfor %}
+    </div>
+    {# <p>
+            <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
+            Starter Template. Get Started by editing.
+            <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
+        </p>
+        {% include "./_includes/partials/content.njk" %} #}
 </div>

@@ -17,6 +17,12 @@
         {% if prism == true %}
             <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
         {% endif %}
+
+		<script>
+			if ("serviceWorker" in navigator) {
+				navigator.serviceWorker.register("/service-worker.js");
+			}
+		</script>
     </head>
     <body>
         <div id="global" class="pb-24" x-data="{filters: { categories: ['main-course'], text: '' } }">

@@ -1,9 +1,9 @@
-<div class="flex w-full lg:w-48">
+<div class="flex w-full lg:w-48 lg:fixed">
     <nav
-        class="flex items-center justify-between lg:justify-between flex-wrap py-6 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
+        class="main_nav fixed w-container flex flex-nowrap flex-row items-center justify-between py-6 mx-auto lg:left-0 lg:flex-col lg:items-start lg:m-0 lg:p-4 lg:w-48" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
         <!--Logo etc-->
-        <div class="flex items-center lg:fixed lg:top-0 lg:left-0 p-0 m-0">
-            <a href="/" class="border-white">
+        <div class="flex items-center p-0 m-0">
+            <a href="/" class="border-white hover:border-white">
                 <img src="/static/img/coeus_chef.png" height="50" width="50" style="object-fit:contain; height:50px; width:50px;" class="no-border"/>
             </a>
         </div>
@@ -17,17 +17,17 @@
             </button>
         </div>
         <!--Menu-->
-        <div class="w-full flex-grow lg:flex lg:flex-col lg:items-center lg:w-auto text-center lg:fixed lg:top-12 lg:left-0" :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
+        <div class="bg-white w-full flex items-start content-center fixed left-0 top-20 mx-0 mt-3 lg:flex lg:flex-col lg:items-center lg:w-auto lg:relative lg:top-0" :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
             {% if recipes_categories.items %}
-                <div class="flex flex-col m-0">
+                <div class="w-container flex flex-row flex-wrap justify-center mx-auto my-0 pt-3 pb-6 lg:flex-col lg:flex-nowrap">
                     {% for item in recipes_categories.items %}
-                        <div class="nav__item mb-3 m-0 flex flex-row flex-nowrap items-center">
-                            <input type="checkbox" name="category_{{ item.slug }}" value="{{ item.slug }}" x-model="filters.categories">
-                                <label for="category_{{ item.slug }}" class="ml-1">{{ item.name }}</label>
-                            </div>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-            </div>
-        </nav>
-    </div>
+                        <label class="main_nav__item mx-3 mb-4 flex flex-row flex-nowrap items-center cursor-pointer select-none lg:mx-0 lg:mb-3" :class="{'active': filters.categories.includes('{{ item.slug }}')}">
+                            <input type="checkbox" name="category_{{ item.slug }}" value="{{ item.slug }}" x-model="filters.categories"/>
+                            <span for="category_{{ item.slug }}" class="ml-1 whitespace-nowrap">{{ item.name }}</span>
+						</label>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+	</nav>
+</div>

@@ -3,7 +3,7 @@ layout: default
 title: LeKevoid's Recipes
 path: home
 ---
-<div class="container mx-auto lg:h-screen flex flex-col justify-start items-center">
+<div class="container mx-auto flex flex-col justify-start items-center lg:py-12">
 	{% set recipeslist = collections.recipes %}
     <h1 class="mt-0">
         <strong class="bg-clip-text text-transparent leading-reset bg-gradient-to-r from-blue-800 to-pink-500 pr-1">
@@ -13,7 +13,6 @@ path: home
 	<div class="w-full">
 		<input type="text" x-model="filters.text" class="w-full mb-6" placeholder="Search recipes..." />
 	</div>
-	<p x-text="filters.text"></p>
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 w-full">
         {% for recipe in recipeslist %}
 			<div class="card recipe_thumbnail"

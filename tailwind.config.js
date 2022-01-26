@@ -15,6 +15,12 @@ module.exports = {
 			lineHeight: {
 				reset: "1",
 			},
+			maxWidth: {
+				48: "12rem",
+			},
+			width: {
+				container: "85%",
+			},
 		},
 	},
 	variants: {},

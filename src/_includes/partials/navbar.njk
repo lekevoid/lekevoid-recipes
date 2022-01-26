@@ -22,7 +22,7 @@
                 <div class="flex flex-col m-0">
                     {% for item in recipes_categories.items %}
                         <div class="nav__item mb-3 m-0 flex flex-row flex-nowrap items-center">
-                            <input type="checkbox" name="category_{{ item.slug }}" value="{{ item.slug }}" x-model="filterCategories">
+                            <input type="checkbox" name="category_{{ item.slug }}" value="{{ item.slug }}" x-model="filters.categories">
                                 <label for="category_{{ item.slug }}" class="ml-1">{{ item.name }}</label>
                             </div>
                         {% endfor %}

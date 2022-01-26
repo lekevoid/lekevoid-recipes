@@ -11,45 +11,81 @@ path: home
         </strong>
     </h1>
 	<div class="w-full">
-		<input type="text" x-model="filterText" class="w-full mb-6" placeholder="Search recipes..." />
+		<input type="text" x-model="filters.text" class="w-full mb-6" placeholder="Search recipes..." />
 	</div>
+	<p x-text="filters.text"></p>
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 w-full">
         {% for recipe in recipeslist %}
-			{% include 'partials/recipe_thumbnail.njk' %}
+			<div class="card recipe_thumbnail"
+				x-init="$watch('filters', updatedFiltersValue => computeVisible(updatedFiltersValue))"
+				x-data="thumbnailData({{recipe.data.categories | dump}}, {{recipe.data.ingredients | dump}}, `{{recipe.data.title}}`, filters)"
+				x-show="isVisible">
+				{% include 'partials/recipe_thumbnail.njk' %}
+			</div>
         {% endfor %}
     </div>
-    {# <p>
-            <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-            Starter Template. Get Started by editing.
-            <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-        </p>
-        {% include "./_includes/partials/content.njk" %} #}
+	<script>
+		document.addEventListener('alpine:init', () => {
+			Alpine.data('thumbnailData', (categories=[], ingredients=[], title="", filters) => {
+				const recipeSearchableText = `${ingredients.map(i => i.name).join(" ")} ${title}`.replace(/[\W]+/g, " ").toLowerCase();
+				const recipeCategories = categories;
+
+				return {
+					visible: true,
+					get isVisible() {
+						return this.visible;
+					},
+					computeVisible(filters) {
+						const filterText = filters.text.toLowerCase();
+						const categoriesMatch = !!recipeCategories.find(cat => Object.values(filters.categories).includes(cat));
+
+						const textMatch = (filterText !== '' && recipeSearchableText.includes(filterText) ? true : false);
+
+						// If a category is selected, show only the recipes that also match the search box.
+						// If the search box is empty, ignore it and show all recipes in the category.
+						if (filters.categories.length === 0 && filterText === "") {
+							this.visible = true;
+						} else if (filters.categories.length > 0 && categoriesMatch) {
+							if (filterText === '' || textMatch) {
+								this.visible = true;
+							}
+						} else if (filters.categories.length === 0 && textMatch) {
+							this.visible = true;
+						} else {
+							this.visible = false;
+						}
+					},
+				}
+			})
+		})
+	</script>
 </div>
 
 
-<script>
+
+{# <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('thumbnail', (categories=[], ingredients=[], title="") => {
-			// console.log(categories, ingredients.flat(), title)
-			console.log(`"${filterText}"`, Object.values(filterCategories))
+			console.log($store.filters);
+			console.log(`"${filterText}"`, Object.values($store.filters.categories))
 
 			const searchableText = `${ingredients.map(i => i.name).join(" ")} ${title}`.toLowerCase().replace(/[\W]+/g, " ");
 			const _filterText = filterText.toLowerCase();
 
-			const categoriesMatch = !!categories.find(cat => Object.values(filterCategories).includes(cat));
+			const categoriesMatch = !!categories.find(cat => Object.values($store.filters.categories).includes(cat));
 			const textMatch = (_filterText !== '' && searchableText.includes(_filterText) ? true : false);
 
 			return {
 				get isVisible() {
 					// If a category is selected, show only the recipes that also match the search box.
 					// If the search box is empty, ignore it and show all recipes in the category.
-					if (filterCategories.length > 0 && categoriesMatch) {
+					if ($store.filters.categories.length > 0 && categoriesMatch) {
 						if (_filterText === '' || textMatch) {
 							return true;
 						}
 					}
 
-					if (filterCategories.length === 0) {
+					if ($store.filters.categories.length === 0) {
 						if (_filterText === '' || textMatch) {
 							return true;
 						}
@@ -60,4 +96,4 @@ path: home
 			}
 		})
     })
-</script>
+</script> #}

@@ -1,4 +1,8 @@
 {
+	"name": "lekevoid-recipes",
+	"version": "1.0.0",
+	"description": "Yum yum !",
+	"main": ".eleventy.js",
 	"scripts": {
 		"dev": "npm-run-all --parallel css eleventy browsersync",
 		"start": "npm-run-all --parallel css eleventy browsersync",

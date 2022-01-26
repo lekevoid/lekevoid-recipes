@@ -10,6 +10,52 @@
         {% if description %}
             <meta name="description" content="{{ description }}"/>
         {% endif %}
+
+		<link rel="dns-prefetch" href="https://theformat.app">
+        <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+        <meta name="robots" content="index,follow">
+        <meta name="generator" content="Eleventy">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+        <link rel="manifest" href="{{ site.url }}/manifest.json">
+        <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        {% if site.icon %}
+            <link rel="shortcut icon" type="image/png" href="{{ site.icon }}"/>
+        {% endif %}
+
+        {%- block seo -%}
+            <!--Twitter Card-->
+            <meta name="twitter:site" content="{{ site.twitter }}">
+            <meta name="twitter:creator" content="{{ site.twitter }}">
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:url" content="{{ site.url + page.url }}">
+            <meta name="twitter:title" content="{{ title + " – " + site.title if title else title }}">
+            <meta name="twitter:description" content="{{ site.description }}">
+            <meta name="twitter:image" content="{{ site.cover_image }}">
+
+            <!--Schema-->
+            <link rel="author" href="{{ site.url }}">
+            <link rel="publisher" href="{{ site.url }}">
+            <meta itemprop="name" content="{{ title + " – " + site.title if title else title }}">
+            <meta itemprop="description" content="{{ site.description }}">
+            <meta itemprop="image" content="{{ site.cover_image }}">
+
+            <!-- Facebook OpenGraph -->
+            <meta property="og:url" content="{{site.url + page.url}}">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="{{ title + " – " + site.title if title else title }}">
+            <meta property="og:image" content="{{ site.cover_image }}">
+            <meta property="og:description" content="{{ site.description }}">
+            <meta property="og:site_name" content="{{ site.title }}">
+            <meta property="og:locale" content="{{ site.lang }}">
+            <meta property="article:author" content="{{ site.url }}">
+        {%- endblock -%}
+
         {% block head %}{% endblock %}
         <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
         <link rel="stylesheet" type="text/css" href="/static/css/paper.css" lazyload/>
@@ -17,6 +63,12 @@
         {% if prism == true %}
             <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
         {% endif %}
+
+		<script>
+			if ("serviceWorker" in navigator) {
+				navigator.serviceWorker.register("/service-worker.js");
+			}
+		</script>
     </head>
     <body>
         <div id="global" class="pb-24" x-data="{filters: { categories: ['main-course'], text: '' } }">
@@ -30,10 +82,5 @@
         </div>
         <script src="/static/js/alpine.js" defer></script>
 
-		<script>
-			if ("serviceWorker" in navigator) {
-				navigator.serviceWorker.register("/service-worker.js");
-			}
-		</script>
     </body>
 </html>

@@ -17,7 +17,7 @@ path: home
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 w-full">
         {% for recipe in recipeslist %}
 			<div class="card recipe_thumbnail"
-				x-init="$watch('filters', updatedFiltersValue => computeVisible(updatedFiltersValue))"
+				x-init="$watch('filters', updatedFiltersValue => handleFilters(updatedFiltersValue))"
 				x-data="thumbnailData({{recipe.data.categories | dump}}, {{recipe.data.ingredients | dump}}, `{{recipe.data.title}}`, filters)"
 				x-show="isVisible">
 				{% include 'partials/recipe_thumbnail.njk' %}
@@ -30,30 +30,37 @@ path: home
 				const recipeSearchableText = `${ingredients.map(i => i.name).join(" ")} ${title}`.replace(/[\W]+/g, " ").toLowerCase();
 				const recipeCategories = categories;
 
+				function computeVisible(filters) {
+					const filterText = filters.text.toLowerCase();
+					const categoriesMatch = !!recipeCategories.find(cat => Object.values(filters.categories).includes(cat));
+
+					const textMatch = (filterText !== '' && recipeSearchableText.includes(filterText) ? true : false);
+
+					// If a category is selected, show only the recipes that also match the search box.
+					// If the search box is empty, ignore it and show all recipes in the category.
+					if (filters.categories.length === 0 && filterText === "") {
+						return true;
+					} else if (filters.categories.length > 0 && categoriesMatch) {
+						if (filterText === '' || textMatch) {
+							return true;
+						}
+					} else if (filters.categories.length === 0 && textMatch) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+
 				return {
 					visible: true,
+					init(){
+						this.visible = computeVisible(filters);
+					},
+					handleFilters(updatedFilters) {
+						this.visible = computeVisible(updatedFilters);
+					},
 					get isVisible() {
 						return this.visible;
-					},
-					computeVisible(filters) {
-						const filterText = filters.text.toLowerCase();
-						const categoriesMatch = !!recipeCategories.find(cat => Object.values(filters.categories).includes(cat));
-
-						const textMatch = (filterText !== '' && recipeSearchableText.includes(filterText) ? true : false);
-
-						// If a category is selected, show only the recipes that also match the search box.
-						// If the search box is empty, ignore it and show all recipes in the category.
-						if (filters.categories.length === 0 && filterText === "") {
-							this.visible = true;
-						} else if (filters.categories.length > 0 && categoriesMatch) {
-							if (filterText === '' || textMatch) {
-								this.visible = true;
-							}
-						} else if (filters.categories.length === 0 && textMatch) {
-							this.visible = true;
-						} else {
-							this.visible = false;
-						}
 					},
 				}
 			})

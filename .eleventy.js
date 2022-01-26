@@ -5,6 +5,7 @@ const htmlmin = require("html-minifier");
 
 const pluginSass = require("eleventy-plugin-sass");
 const Image = require("@11ty/eleventy-img");
+const pluginPWA = require("eleventy-plugin-pwa");
 
 module.exports = function (eleventyConfig) {
 	// Disable automatic use of your .gitignore
@@ -20,6 +21,9 @@ module.exports = function (eleventyConfig) {
 
 	// Syntax Highlighting for Code blocks
 	eleventyConfig.addPlugin(syntaxHighlight);
+
+	// Add PWA support
+	eleventyConfig.addPlugin(pluginPWA);
 
 	// Add SASS support
 	const sassPluginOptions = { watch: ["./src/static/css/**/*.{scss,sass}"], outputDir: "./_site/static/css/" };

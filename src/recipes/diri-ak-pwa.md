@@ -60,3 +60,10 @@ reference:
 notes: Add spicy as needed, I put none here because it's supposed to be a
   kid-friendly recipe.
 ---
+1. Make rice directly in the chicken stock
+2. In a very large pan, start browning the onions in butter.
+3. Add the garlic and finish browning the onions.
+4. Drain the beans and add them to the onion. Let simmer on medium-high heat to let some liquid evaporate.
+5. Add the coconut milk, thyme and clove. Let flavors mix.
+6. Add the cooked rice. It doesn't matter if the rice is slightly undercooked, it'll finish cooking in the milk.
+7. Serve hot. Recommended : serve with fresh cilantro or cilantro-infused oil on top.

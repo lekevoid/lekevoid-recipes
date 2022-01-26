@@ -5,18 +5,18 @@ items:
     slug: caribbean
   - slug: chinese
     name: Chinese
+  - name: Haitian
+    slug: haitian
   - name: Indian
     slug: indian
   - name: Japanese
     slug: japanese
   - name: Korean
     slug: korean
-  - name: Morroccan
-    slug: morroccan
+  - name: Moroccan
+    slug: moroccan
   - name: Russian
     slug: russian
-  - name: South American
-    slug: south-american
   - name: Swedish
     slug: swedish
   - name: Thai

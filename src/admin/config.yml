@@ -70,6 +70,7 @@ collections:
                       required: true,
                   }
                 - { label: "Comment", name: "comment", widget: "string", required: false }
+          - { label: "Preparation", name: "body", widget: "markdown" }
           - { label: "Preparation", name: "preparation_steps", widget: "markdown" }
           - label: "Tags"
             name: "tags"

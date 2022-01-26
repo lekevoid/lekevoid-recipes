@@ -1,7 +1,7 @@
 {# <div class="card recipe_thumbnail" x-data="thumbnail({{recipe.data.categories | dump}}, {{recipe.data.ingredients | dump}}, `{{recipe.data.title}}`, filterCategories, filterText)" x-show="isVisible"> #}
 {# <div class="card recipe_thumbnail" x-data="thumbnail({{recipe.data.categories | dump}}, {{recipe.data.ingredients | dump}}, `{{recipe.data.title}}`)"> #}
 
-<a href="/" style="background:transparent none;">
+<a href="{{ recipe.url | url }}" style="background:transparent none;">
 	<img src="{{ recipe.data.feature_image }}" alt="{{ recipe.data.title }}" class="object-cover h-32 w-full"/>
 	<div class="card-body">
 		<h4 class="card-title text-lg">{{ recipe.data.title }}</h4>

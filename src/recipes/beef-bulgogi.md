@@ -6,7 +6,7 @@ time: 30
 complexity: 1
 categories:
   - main-course
-origin: chinese
+origin: korean
 ingredients:
   - quantity: "1"
     measure: cup

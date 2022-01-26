@@ -23,7 +23,10 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(syntaxHighlight);
 
 	// Add PWA support
-	eleventyConfig.addPlugin(pluginPWA);
+	eleventyConfig.addPlugin(pluginPWA, {
+		swDest: "./_site/sw.js",
+		globDirectory: "./_site",
+	});
 
 	// Add SASS support
 	const sassPluginOptions = { watch: ["./src/static/css/**/*.{scss,sass}"], outputDir: "./_site/static/css/" };

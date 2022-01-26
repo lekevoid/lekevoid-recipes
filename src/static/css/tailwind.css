@@ -19,6 +19,10 @@ body pre[class*="language-"] {
 	@apply bg-gray-800;
 }
 
+.main_title {
+	font-size: calc(min(14vw, 4rem));
+}
+
 .main_nav__item.active {
 	@apply font-bold text-purple-500;
 }

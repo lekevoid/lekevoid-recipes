@@ -1,6 +1,6 @@
 ---
 date: 2022-01-26T17:00:42.035Z
-title: Diri ak pwa
+title: Diri ak Pwa
 feature_image: /static/img/1552488799980.jpeg
 time: 29
 complexity: 1

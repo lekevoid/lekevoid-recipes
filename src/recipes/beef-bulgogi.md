@@ -48,3 +48,10 @@ tags: meat
 reference:
   - link: https://damndelicious.net/2019/04/21/korean-beef-bulgogi/
 ---
+1. Blend marinade together in the blender, add some water if needed
+2. If possible, make meat marinate in advance
+3. When ready to cook, bring marinade to a boil
+4. Cook meat separately, slowly if possible
+5. When meat is close to ready, mix the marinade in
+6. Cook until properly evaporated and texture is nice
+7. Decorate with sesame seeds and/or green onions and serve

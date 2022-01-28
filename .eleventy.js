@@ -22,12 +22,6 @@ module.exports = function (eleventyConfig) {
 	// Syntax Highlighting for Code blocks
 	eleventyConfig.addPlugin(syntaxHighlight);
 
-	// Add PWA support
-	eleventyConfig.addPlugin(pluginPWA, {
-		swDest: "./_site/sw.js",
-		globDirectory: "./_site",
-	});
-
 	// Add SASS support
 	const sassPluginOptions = { watch: ["./src/static/css/**/*.{scss,sass}"], outputDir: "./_site/static/css/" };
 	eleventyConfig.addPlugin(pluginSass, sassPluginOptions);
@@ -66,6 +60,9 @@ module.exports = function (eleventyConfig) {
 
 		return content;
 	});
+
+	// Add PWA support
+	eleventyConfig.addPlugin(pluginPWA);
 
 	// Let Eleventy transform HTML files as nunjucks
 	// So that we can use .html instead of .njk

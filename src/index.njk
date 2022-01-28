@@ -11,13 +11,13 @@ path: home
 	<div class="w-full">
 		<input type="text" x-model="filters.text" class="w-full mb-6" placeholder="Search recipes..." />
 	</div>
-    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 w-full">
+    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4 w-full">
         {% for recipe in recipeslist %}
-			<div class="card recipe_thumbnail"
+			<div class="card recipe_card"
 				x-init="$watch('filters', updatedFiltersValue => handleFilters(updatedFiltersValue))"
 				x-data="thumbnailData({{recipe.data.categories | dump}}, {{recipe.data.ingredients | dump}}, `{{recipe.data.title}}`, filters)"
 				x-show="isVisible">
-				{% include 'partials/recipe_thumbnail.njk' %}
+				{% include 'partials/recipe_card.njk' %}
 			</div>
         {% endfor %}
     </div>

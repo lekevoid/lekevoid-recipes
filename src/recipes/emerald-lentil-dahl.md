@@ -83,3 +83,23 @@ tags: vegan
 reference:
   - link: https://www.feastingathome.com/lentil-dal-with-spinach/
 ---
+## Before anything
+
+* Start the rice.
+* Rinse thoroughly to remove dirt. Boil in salted water for 20-30 minutes, then strain.
+
+## Spinach sauce
+
+1. Sautee the **onion** in butter, over medium heat for 3-4 minutes, then add **garlic**, **ginger** and **chilies**.
+2. Add the **mustard**, **cumin** and **garam masala** and stir two minutes. Lower heat to low.
+3. Add the **spinach**, **mint** and **water**. Cover pan, 2-3 minutes, letting spinach wilt. Give a few stirs.
+4. When spinach is wilted, blend a few times to smoothen a little. Add water if necessary, up to ¾ cups.
+5. Put together **spinach mix**, **lentils** and **yogurt**. Serve.
+
+## Sides
+
+Recommended with any or all of :
+
+* White rice
+* Naan bread
+* Sweet & limey yogurt sauce

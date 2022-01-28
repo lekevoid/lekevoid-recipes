@@ -90,3 +90,10 @@ notes: >-
 
   From experience, frozen eggs form nice ribbons every time and effortlessly, while fresh require the right temperature and stirring speed.
 ---
+Put the shiitake to boil on medium-low until tender consistency is achieved and flavor is released to the broth. It will take longer with dried than with fresh. If using firm tofu, put the cubes at that time so it softens up.
+
+When mushrooms are rehydrated/tender, take some of the liquid to do a slurry with the corn starch.
+
+Put the eggs in. If fresh, whisk the eggs together in a bowl and pour slowly into the boiling soup (make it hot so the eggs cook quicker) while turning gently to form ribbons. If frozen, put them in and let unravel by themselves while stirring gently.
+
+Then mix all the things together and let simmer until all powders dissolve.

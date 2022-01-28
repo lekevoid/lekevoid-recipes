@@ -55,3 +55,7 @@ preparation_steps: >-
 reference:
   - link: https://dinnerthendessert.com/general-tsos-chicken/
 ---
+1. Mix all ingredients, except the corn starch, into a pot. Heat up until it just starts bubbling.
+2. Add the corn starch while whisking. It should reach its maximum thickness within 30 seconds. Turn the fire to low.
+3. Add water and/or corn starch, a little at a time, until desired consistency is reached.
+4. Mix with tofu or chicken in the skillet, leave just long enough to coat thoroughly and reach desired texture.

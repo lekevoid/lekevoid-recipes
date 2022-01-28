@@ -27,7 +27,7 @@ body pre[class*="language-"] {
 	@apply font-bold text-purple-500;
 }
 
-.prose ol>li::before,
-.prose ul>li::before {
-	display: none;
+article.prose ol>li::marker,
+article.prose ul>li::marker {
+	content:none;
 }

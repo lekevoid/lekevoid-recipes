@@ -76,7 +76,7 @@ url: lekevoid-recipes.netlify.app
     <body>
         <div id="global" class="pb-24" x-data="{filters: { categories: ['main-course'], text: '' } }">
             <div class="flex flex-row flex-wrap">
-                {% include "./partials/navbar.njk" %}
+               	{% include "./partials/navbar.njk" %}
                 <div class="flex w-full px-0 pt-32 lg:pt-0 lg:pl-48 lg:pr-12 2xl:pl-24 z-0">
                     {{ content | safe }}
                 </div>
@@ -84,6 +84,5 @@ url: lekevoid-recipes.netlify.app
             {% include "./partials/footer.njk" %}
         </div>
         <script src="/static/js/alpine.js" defer></script>
-
     </body>
 </html>

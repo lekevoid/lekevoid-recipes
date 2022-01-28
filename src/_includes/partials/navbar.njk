@@ -8,26 +8,28 @@
             </a>
         </div>
         <!--Toggle button (hidden on large screens)-->
-        <div class="lg:hidden m-0">
-            <button @click="isOpen = !isOpen" type="button" class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
-                <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
-                    <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-                </svg>
-            </button>
-        </div>
-        <!--Menu-->
-        <div class="bg-white w-full flex items-start content-center fixed left-0 top-20 mx-0 mt-3 lg:flex lg:flex-col lg:items-center lg:w-auto lg:relative lg:top-0" :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
-            {% if recipes_categories.items %}
-                <div class="w-container flex flex-row flex-wrap justify-center mx-auto my-0 pt-3 pb-6 lg:flex-col lg:flex-nowrap">
-                    {% for item in recipes_categories.items %}
-                        <label class="main_nav__item mx-3 mb-4 flex flex-row flex-nowrap items-center cursor-pointer select-none lg:mx-0 lg:mb-3" :class="{'active': filters.categories.includes('{{ item.slug }}')}">
-                            <input type="checkbox" name="category_{{ item.slug }}" value="{{ item.slug }}" x-model="filters.categories"/>
-                            <span for="category_{{ item.slug }}" class="ml-1 whitespace-nowrap">{{ item.name }}</span>
-						</label>
-					{% endfor %}
-				</div>
-			{% endif %}
-		</div>
+		{% if path == "home" %}
+			<div class="lg:hidden m-0">
+				<button @click="isOpen = !isOpen" type="button" class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
+					<svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+						<path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+						<path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+					</svg>
+				</button>
+			</div>
+			<!--Menu-->
+			<div class="bg-white w-full flex items-start content-center fixed left-0 top-20 mx-0 mt-3 lg:flex lg:flex-col lg:items-center lg:w-auto lg:relative lg:top-0" :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
+				{% if recipes_categories.items %}
+					<div class="w-container flex flex-row flex-wrap justify-center mx-auto my-0 pt-3 pb-6 lg:flex-col lg:flex-nowrap">
+						{% for item in recipes_categories.items %}
+							<label class="main_nav__item mx-3 mb-4 flex flex-row flex-nowrap items-center cursor-pointer select-none lg:mx-0 lg:mb-3" :class="{'active': filters.categories.includes('{{ item.slug }}')}">
+								<input type="checkbox" name="category_{{ item.slug }}" value="{{ item.slug }}" x-model="filters.categories"/>
+								<span for="category_{{ item.slug }}" class="ml-1 whitespace-nowrap">{{ item.name }}</span>
+							</label>
+						{% endfor %}
+					</div>
+				{% endif %}
+			</div>
+		{% endif %}
 	</nav>
 </div>

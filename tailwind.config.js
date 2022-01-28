@@ -17,6 +17,7 @@ module.exports = {
 			},
 			maxWidth: {
 				48: "12rem",
+				"50vw": "50vw",
 			},
 			width: {
 				container: "85%",

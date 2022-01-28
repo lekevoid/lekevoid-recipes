@@ -54,3 +54,8 @@ preparation_steps: >-
 
   Sauce may be a bit liquidy when retiring the meat, feel free to thicken by any means necessary.
 ---
+Place everything in slow cooker, trying to drown the meat in the sauce.
+
+Cook on low for 8 hours.
+
+Sauce may be a bit liquidy when retiring the meat, feel free to thicken by any means necessary.

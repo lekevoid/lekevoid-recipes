@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 /*Your Custom CSS Goes here*/
+html {
+	font-size: 16px !important;
+}
 
 h1 {
 	@apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
@@ -29,5 +32,11 @@ body pre[class*="language-"] {
 
 article.prose ol>li::marker,
 article.prose ul>li::marker {
-	content:none;
+	content: none;
+}
+
+@media (min-width:960px) {
+	html {
+		font-size: 20px !important;
+	}
 }

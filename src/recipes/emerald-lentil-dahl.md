@@ -83,7 +83,7 @@ preparation_steps: >-
 
   * Sweet & limey yogurt sauce
 ---
-## Before anything
+### Before anything
 
 * Start the rice.
 * Rinse thoroughly to remove dirt. Boil in salted water for 20-30 minutes, then strain.

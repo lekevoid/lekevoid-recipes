@@ -45,6 +45,9 @@ ingredients:
     measure: cup
   - name: Butter, to cook the onion
     measure: some
+tags: vegetarian
+reference:
+  - link: https://www.feastingathome.com/lentil-dal-with-spinach/
 preparation_steps: >-
   ## Before anything
 
@@ -79,16 +82,13 @@ preparation_steps: >-
   * Naan bread
 
   * Sweet & limey yogurt sauce
-tags: vegan
-reference:
-  - link: https://www.feastingathome.com/lentil-dal-with-spinach/
 ---
 ## Before anything
 
 * Start the rice.
 * Rinse thoroughly to remove dirt. Boil in salted water for 20-30 minutes, then strain.
 
-## Spinach sauce
+### Spinach sauce
 
 1. Sautee the **onion** in butter, over medium heat for 3-4 minutes, then add **garlic**, **ginger** and **chilies**.
 2. Add the **mustard**, **cumin** and **garam masala** and stir two minutes. Lower heat to low.
@@ -96,7 +96,7 @@ reference:
 4. When spinach is wilted, blend a few times to smoothen a little. Add water if necessary, up to ¾ cups.
 5. Put together **spinach mix**, **lentils** and **yogurt**. Serve.
 
-## Sides
+### Sides
 
 Recommended with any or all of :
 

@@ -70,8 +70,12 @@ collections:
                       required: true,
                   }
                 - { label: "Comment", name: "comment", widget: "string", required: false }
-          - { label: "Preparation", name: "body", widget: "markdown" }
-          - { label: "Preparation", name: "preparation_steps", widget: "markdown" }
+          - {
+                label: "Preparation",
+                name: "body",
+                widget: "markdown",
+                buttons: ["bold", "italic", code, "link", "heading-three", "heading-four", "heading-five", "quote", "bulleted-list", "numbered-list"],
+            }
           - label: "Tags"
             name: "tags"
             widget: "select"

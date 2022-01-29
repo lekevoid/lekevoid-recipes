@@ -13,12 +13,14 @@ path: home
 	</div>
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4 w-full">
         {% for recipe in recipeslist %}
-			<div class="card recipe_card"
+			<a class="card recipe_card pb-6 flex flex-row"
 				x-init="$watch('filters', updatedFiltersValue => handleFilters(updatedFiltersValue))"
 				x-data="thumbnailData({{recipe.data.categories | dump}}, {{recipe.data.ingredients | dump}}, `{{recipe.data.title}}`, filters)"
-				x-show="isVisible">
+				x-show="isVisible"
+				href="{{ recipe.url | url }}"
+				style="background:transparent none;">
 				{% include 'partials/recipe_card.njk' %}
-			</div>
+			</a>
         {% endfor %}
     </div>
 	<script>

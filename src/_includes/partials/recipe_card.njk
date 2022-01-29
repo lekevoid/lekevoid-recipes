@@ -1,26 +1,21 @@
-{# <div class="card recipe_card" x-data="thumbnail({{recipe.data.categories | dump}}, {{recipe.data.ingredients | dump}}, `{{recipe.data.title}}`, filterCategories, filterText)" x-show="isVisible"> #}
-{# <div class="card recipe_card" x-data="thumbnail({{recipe.data.categories | dump}}, {{recipe.data.ingredients | dump}}, `{{recipe.data.title}}`)"> #}
-
-<a href="{{ recipe.url | url }}" style="background:transparent none;">
-	<img src="{{ recipe.data.feature_image }}" alt="{{ recipe.data.title }}" class="object-cover h-32 w-full"/>
-	<div class="card-body">
-		<h4 class="card-title text-lg leading-tight pb-2">{{ recipe.data.title }}</h4>
-		<div class="flex flex-row flex-wrap">
-			{% if recipe.data.time %}
-				<h5 class="card-subtitle flex-auto w-full md:w-2/3 whitespace-nowrap" title="Required Time">⏱
-					{{ recipe.data.time }}
-					mins</h5>
-			{% endif %}
-			{% if recipe.data.complexity %}
-				<h5 class="card-subtitle flex-auto w-full md:w-1/3 whitespace-nowrap hidden md:flex" title="Complexity">📐
-					{{ recipe.data.complexity }}
-				</h5>
-			{% endif %}
-		</div>
-		{% if recipe.data.origin %}
-			<div class="flex justify-end mt-2">
-				<img src="/static/img/flags/{{ recipe.data.origin }}.svg" alt="{{ recipe.data.origin }}" title="{{ recipe.data.origin }}" class="w-6 h-6 object-contain" />
-			</div>
+<img src="{{ recipe.data.feature_image }}" alt="{{ recipe.data.title }}" class="object-cover h-32 w-full"/>
+<div class="card-body">
+	<h4 class="card-title text-lg leading-tight pb-2">{{ recipe.data.title }}</h4>
+	<div class="flex flex-row flex-wrap">
+		{% if recipe.data.time %}
+			<h5 class="card-subtitle flex-auto w-full md:w-2/3 whitespace-nowrap" title="Required Time">⏱
+				{{ recipe.data.time }}
+				mins</h5>
+		{% endif %}
+		{% if recipe.data.complexity %}
+			<h5 class="card-subtitle flex-auto w-full md:w-1/3 whitespace-nowrap hidden md:flex" title="Complexity">📐
+				{{ recipe.data.complexity }}
+			</h5>
 		{% endif %}
 	</div>
-</a>
+	{% if recipe.data.origin %}
+		<div class="flex justify-end absolute bottom-2 right-2">
+			<img src="/static/img/flags/{{ recipe.data.origin }}.svg" alt="{{ recipe.data.origin }}" title="{{ recipe.data.origin }}" class="w-12 h-6 object-contain" />
+		</div>
+	{% endif %}
+</div>

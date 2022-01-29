@@ -9,12 +9,12 @@ prism: true
     </div>
 	<div class="hero relative">
 		<img src="{{feature_image}}" class="mb-8 h-96 w-full object-cover" style="max-height:50vw;" />
-		<img src="/static/img/flags/{{origin}}.svg" class="w-24 h-auto object-contain absolute bottom-3 right-3 drop-shadow-lg" />
+		<img src="/static/img/flags/{{origin}}.svg" class="w-16 lg:w-24 h-auto object-contain absolute bottom-3 right-3 drop-shadow-lg" />
 	</div>
 	<div class="card mb-12">
 		<div class="card-body">
-			<div class="m-4 lg:m-6 prose">
-				<h2 class="mb-4 pb-4 border" style="border-top:none; border-left:none; border-right:none; border-color:#DDD;">Ingredients</h2>
+			<div class="m-2 lg:m-6 prose">
+				<h2 class="mb-4 pb-4 border w-full" style="border-top:none; border-left:none; border-right:none; border-color:#DDD;">Ingredients</h2>
 				<ul class="pl-4 leading-loose">
 					{% for ingredient in ingredients %}
 						<li>
@@ -33,8 +33,8 @@ prism: true
 	</div>
 	<div class="card">
 		<div class="card-body">
-			<article class="prose m-4 lg:m-6 w-full">
-			<h2 class="mb-4 pb-4 border" style="border-top:none; border-left:none; border-right:none; border-color:#DDD;">Preparation</h2>
+			<article class="prose my-4 max-auto lg:my-6">
+				<h2 class="mb-4 pb-4 border w-full" style="border-top:none; border-left:none; border-right:none; border-color:#DDD;">Preparation</h2>
 				{{ content | safe }}
 			</article>
 		</div>

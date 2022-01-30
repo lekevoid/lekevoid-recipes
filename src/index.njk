@@ -11,7 +11,7 @@ path: home
 	<div class="w-full">
 		<input type="text" x-model="filters.text" class="w-full mb-6" placeholder="Search recipes..." />
 	</div>
-    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4 w-full">
+    <div class="recipes_list grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4 w-full opacity-0">
         {% for recipe in recipeslist %}
 			<a class="card recipe_card pb-6 flex flex-row"
 				x-init="$watch('filters', updatedFiltersValue => handleFilters(updatedFiltersValue))"

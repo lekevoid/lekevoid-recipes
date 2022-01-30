@@ -30,6 +30,21 @@ body pre[class*="language-"] {
 	@apply font-bold text-purple-500;
 }
 
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.recipes_list {
+	animation: fadeIn 2s ease 0s 1 forwards;
+	opacity: 0;
+}
+
 article.prose ol>li::marker,
 article.prose ul>li::marker {
 	content: none;

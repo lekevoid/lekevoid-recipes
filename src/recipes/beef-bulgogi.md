@@ -10,24 +10,24 @@ origin: korean
 ingredients:
   - quantity: "1"
     measure: cup
-    name: frozen diced cantaloupe
+    name: Frozen diced cantaloupe
     comment: "Any fruit can do really : pears, mangos..."
   - quantity: 1/4
     measure: cup
-    name: light soy sauce
-    comment: aaa
+    name: Light soy sauce
+    comment: ""
   - quantity: "2"
     measure: tbsp
-    name: brown sugar
-    comment: aaa
+    name: Brown sugar
+    comment: ""
   - quantity: "2"
     measure: tsp
-    name: minced garlic
-    comment: aaa
+    name: Minced garlic
+    comment: ""
   - quantity: "1"
     measure: tsp
-    name: ginger
-    comment: aaa
+    name: Ginger
+    comment: ""
   - quantity: "1"
     measure: tsp
     name: Asian spicy pepper-garlic sauce
@@ -35,7 +35,10 @@ ingredients:
   - measure: some
     quantity: ""
     name: Sesame seeds and/or green onions, to decorate
-    comment: aaa
+    comment: ""
+tags: meat
+reference:
+  - link: https://damndelicious.net/2019/04/21/korean-beef-bulgogi/
 preparation_steps: |-
   1. Blend marinade together in the blender, add some water if needed
   2. If possible, make meat marinate in advance
@@ -44,9 +47,6 @@ preparation_steps: |-
   5. When meat is close to ready, mix the marinade in
   6. Cook until properly evaporated and texture is nice
   7. Decorate with sesame seeds and/or green onions and serve
-tags: meat
-reference:
-  - link: https://damndelicious.net/2019/04/21/korean-beef-bulgogi/
 ---
 1. Blend marinade together in the blender, add some water if needed
 2. If possible, make meat marinate in advance

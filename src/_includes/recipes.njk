@@ -25,6 +25,12 @@ prism: true
 								{{ ingredient.measure | safe }}
 							{% endif %}
 							{{ ingredient.name | safe }}
+							{% if ingredient.comment %}
+								<span class="tooltip">
+									<img class="info" src="/static/img/i.svg" />
+									<span class="description">{{ ingredient.comment | safe }}</span>
+								</span>
+							{% endif %}
 						</li>
 					{% endfor %}
 				</ul>

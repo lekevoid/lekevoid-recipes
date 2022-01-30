@@ -35,6 +35,51 @@ article.prose ul>li::marker {
 	content: none;
 }
 
+.tooltip {
+	cursor: default;
+	display: inline-block;
+	margin: 0 0 0 10px !important;
+	position: relative;
+}
+
+.tooltip .info {
+	background-color: #FFF;
+	height: 1em;
+	margin: 0;
+	opacity: 0.5;
+	position: relative;
+	top: 0.1em;
+	transition: opacity 0.3s ease;
+	width: 1em;
+}
+
+.tooltip .description {
+	background: linear-gradient(to bottom, #FFF 0%, #ADF 100%);
+	border: 1px solid #8AF;
+	border-radius: 4px;
+	display: grid;
+	font-size: 0.8em;
+	height: 2em;
+	left: 50%;
+	opacity: 0;
+	padding: 0 20px;
+	place-items: center;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	transform: translate(-50%, -110%);
+	transition: opacity 0.3s ease;
+	white-space: nowrap;
+}
+
+.tooltip:hover .info {
+	opacity: 0.8;
+}
+
+.tooltip:hover .description {
+	opacity: 1;
+}
+
 @media (min-width:960px) {
 	html {
 		font-size: 20px !important;

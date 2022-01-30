@@ -6,8 +6,6 @@ time: 60
 complexity: 2
 categories:
   - soup
-  - main-course
-  - side-dish
 origin: chinese
 ingredients:
   - name: Chicken stock
@@ -66,6 +64,16 @@ ingredients:
     quantity: 1-2
   - name: Firm tofu slices (optional, to add proteins)
     measure: some
+reference:
+  - link: https://www.gimmesomeoven.com/hot-and-sour-soup-recipe/
+  - link: https://thewoksoflife.com/hot-sour-soup/
+notes: >-
+  Gigi says she likes the eggs being more spread out. I.e, don’t worry too much
+  if there aren’t nice ribbons.
+
+  Both soft or firm tofu can work, but Gigi says she prefers firm.
+
+  From experience, frozen eggs form nice ribbons every time and effortlessly, while fresh require the right temperature and stirring speed.
 preparation_steps: >-
   Put the shiitake to boil on medium-low until tender consistency is achieved
   and flavor is released to the broth. It will take longer with dried than with
@@ -79,16 +87,6 @@ preparation_steps: >-
 
 
   Then mix all the things together and let simmer until all powders dissolve.
-reference:
-  - link: https://www.gimmesomeoven.com/hot-and-sour-soup-recipe/
-  - link: https://thewoksoflife.com/hot-sour-soup/
-notes: >-
-  Gigi says she likes the eggs being more spread out. I.e, don’t worry too much
-  if there aren’t nice ribbons.
-
-  Both soft or firm tofu can work, but Gigi says she prefers firm.
-
-  From experience, frozen eggs form nice ribbons every time and effortlessly, while fresh require the right temperature and stirring speed.
 ---
 Put the shiitake to boil on medium-low until tender consistency is achieved and flavor is released to the broth. It will take longer with dried than with fresh. If using firm tofu, put the cubes at that time so it softens up.
 

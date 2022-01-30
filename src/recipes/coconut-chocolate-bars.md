@@ -28,10 +28,10 @@ ingredients:
     quantity: "1"
     measure: cup
     comment: Semi-sweet or dark, both work fine
-preparation_steps: blah
 tags: vegetarian
 reference:
   - link: https://beamingbaker.com/5-ingredient-no-bake-chocolate-coconut-bars-paleo-vegan-gluten-free-dairy-free/
+preparation_steps: blah
 ---
 1. If coconut is not already powdered, process the coconut in the blender.
 2. Melt the coconut oil.
@@ -41,4 +41,4 @@ reference:
 6. Once the chocolate is melted, pour it on top of the coconut mix.
 7. Put back in the freezer to chill for at least an hour.
 8. Cut down to bite-size pieces.
-9. And as aaaalways, eeeeeeenjoyyy !
+9. And as aaaalways, eeeeeeenjoyyy !!!

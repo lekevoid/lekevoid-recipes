@@ -18,6 +18,9 @@ ingredients:
   - name: Onion
     quantity: "1"
     measure: whole
+  - name: Carrots
+    quantity: 1-2
+    measure: whole
   - name: Garlic cloves
     quantity: "4"
     measure: whole
@@ -25,9 +28,6 @@ ingredients:
     comment: Any, but brown sugar works best
     quantity: "2"
     measure: tbsp
-  - name: Carrots
-    quantity: 1-2
-    measure: whole
   - name: Mango, diced
     quantity: "1"
     measure: cup

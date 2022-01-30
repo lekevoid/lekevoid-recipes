@@ -4,7 +4,7 @@ title: LeKevoid's Recipes
 path: home
 ---
 <div class="container mx-auto flex flex-col justify-start items-center lg:py-12">
-	{% set recipeslist = collections.recipes %}
+	{% set recipeslist = collections.recipes | sort(attribute="data.title") %}
     <h1 class="main_title mt-0">
         <strong class="bg-clip-text text-transparent leading-reset bg-gradient-to-r from-blue-800 to-pink-500 pl-1">{{ title }}&nbsp;&nbsp;</strong>
     </h1>

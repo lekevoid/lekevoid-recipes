@@ -33,6 +33,9 @@ ingredients:
   - name: Chia seeds (optional)
     quantity: "1"
     measure: some
+  - name: Banana (optional)
+    quantity: "1"
+    measure: whole
 tags: vegetarian
 notes: Yogurt can be replaced with another cup of almond milk. Plus, it makes it
   vegan !

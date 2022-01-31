@@ -15,7 +15,7 @@
 	</div>
 	{% if recipe.data.origin %}
 		<div class="flex justify-end absolute bottom-2 right-2">
-			<img src="/static/img/flags/{{ recipe.data.origin }}.svg" alt="{{ recipe.data.origin }}" title="{{ recipe.data.origin }}" class="w-12 h-6 object-contain" />
+			<img src="/static/img/flags/{{ recipe.data.origin }}.svg" alt="{{ recipe.data.origin | capitalize }}" title="{{ recipe.data.origin | capitalize }}" class="w-12 h-6 object-contain" />
 		</div>
 	{% endif %}
 </div>

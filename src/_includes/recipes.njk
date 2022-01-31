@@ -13,7 +13,7 @@ prism: true
 	</div>
 	<div class="card mb-12">
 		<div class="card-body">
-			<div class="m-2 lg:m-6 prose">
+			<div class="prose mx-2 lg:mx-6 my-4 max-auto lg:my-6">
 				<h2 class="mb-4 pb-4 border w-full" style="border-top:none; border-left:none; border-right:none; border-color:#DDD;">Ingredients</h2>
 				<ul class="leading-loose">
 					{% for ingredient in ingredients %}
@@ -21,10 +21,12 @@ prism: true
 							{% if ingredient.measure != "some" %}
 								{{ ingredient.quantity | safe }}
 							{% endif %}
-							{% if ingredient.measure != "whole" %}
-								{{ ingredient.measure | safe }}
+							{% if ingredient.measure == "some" %}
+								{{ ingredient.measure | capitalize }}
+							{% elif ingredient.measure != "whole" %}
+								{{ ingredient.measure | lower | safe }}
 							{% endif %}
-							{{ ingredient.name | safe }}
+							<b class="text-gray-600">{{ ingredient.name | safe }}</b>
 							{% if ingredient.comment %}
 								<span class="tooltip">
 									<img class="info" src="/static/img/icon_info.svg" />
@@ -39,20 +41,20 @@ prism: true
 	</div>
 	<div class="card mb-12">
 		<div class="card-body">
-			<article class="prose my-4 max-auto lg:my-6">
+			<article class="prose mx-2 lg:mx-6 my-4 max-auto lg:my-6">
 				<h2 class="mb-4 pb-4 border w-full" style="border-top:none; border-left:none; border-right:none; border-color:#DDD;">Preparation</h2>
 				{{ content | safe }}
 			</article>
 		</div>
 	</div>
 	{% if notes %}
-	<div class="card mb-12">
-		<div class="card-body">
-			<article class="prose my-4 max-auto lg:my-6">
-				<h2 class="mb-4 pb-4 border w-full" style="border-top:none; border-left:none; border-right:none; border-color:#DDD;">Notes</h2>
-				<p>{{ notes | safe }}</p>
-			</article>
+		<div class="card mb-12">
+			<div class="card-body">
+				<div class="prose mx-2 lg:mx-6 my-4 max-auto lg:my-6">
+					<h2 class="mb-4 pb-4 border w-full" style="border-top:none; border-left:none; border-right:none; border-color:#DDD;">Notes</h2>
+					<p>{{ notes | safe }}</p>
+				</div>
+			</div>
 		</div>
-	</div>
 	{% endif %}
 </div>

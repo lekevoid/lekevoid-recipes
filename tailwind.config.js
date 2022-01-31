@@ -12,6 +12,9 @@ module.exports = {
 		},
 		extend: {
 			colors: {},
+			dropShadow: {
+				heavy: "6px 6px 20px rgba(0, 0, 0, 0.6)",
+			},
 			lineHeight: {
 				reset: "1",
 			},

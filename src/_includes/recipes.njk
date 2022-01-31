@@ -8,8 +8,8 @@ prism: true
         <h1 class="font-bold text-4xl tracking-wide mt-0 lg:mt-16">{{title}}</h1>
     </div>
 	<div class="hero relative">
-		<img src="{{feature_image}}" class="mb-8 h-96 w-full object-cover" style="max-height:50vw;" />
-		<img src="/static/img/flags/{{origin}}.svg" class="w-16 lg:w-24 h-auto object-contain absolute bottom-3 right-3 drop-shadow-lg" />
+		<img src="{{feature_image}}" class="mb-8 h-96 w-full object-cover drop-shadow-heavy" style="max-height:50vw;" />
+		<img src="/static/img/flags/{{origin}}.svg" class="recipe_flag w-16 h-auto object-contain absolute bottom-3 right-3 drop-shadow-heavy" :class="{'border-0': '{{origin}}' == 'non_specific'}" />
 	</div>
 	<div class="card mb-12">
 		<div class="card-body">
@@ -37,7 +37,7 @@ prism: true
 			</div>
 		</div>
 	</div>
-	<div class="card">
+	<div class="card mb-12">
 		<div class="card-body">
 			<article class="prose my-4 max-auto lg:my-6">
 				<h2 class="mb-4 pb-4 border w-full" style="border-top:none; border-left:none; border-right:none; border-color:#DDD;">Preparation</h2>
@@ -45,4 +45,14 @@ prism: true
 			</article>
 		</div>
 	</div>
+	{% if notes %}
+	<div class="card mb-12">
+		<div class="card-body">
+			<article class="prose my-4 max-auto lg:my-6">
+				<h2 class="mb-4 pb-4 border w-full" style="border-top:none; border-left:none; border-right:none; border-color:#DDD;">Notes</h2>
+				<p>{{ notes | safe }}</p>
+			</article>
+		</div>
+	</div>
+	{% endif %}
 </div>

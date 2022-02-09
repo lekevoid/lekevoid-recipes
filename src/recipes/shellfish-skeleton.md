@@ -1,6 +1,6 @@
 ---
 date: 2022-02-09T19:38:13.020Z
-title: Shellfish Skeleton
+title: Shellfish Skeletons
 feature_image: /static/img/untitled-1.jpg
 categories:
   - side-dish

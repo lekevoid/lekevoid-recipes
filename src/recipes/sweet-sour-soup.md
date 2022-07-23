@@ -10,14 +10,14 @@ origin: chinese
 ingredients:
   - name: Chicken stock
     comment: Any flavorful stock (vegetable, beef...) will do
-    quantity: "6"
+    quantity: "8"
     measure: cup
   - name: Rice vinegar
     comment: Can be substituted with white vinegar, although not ideal
     quantity: 1/2
     measure: cup
   - name: Corn starch
-    quantity: "2"
+    quantity: "3"
     measure: tbsp
   - name: Good handful of Shiitake mushrooms
     quantity: "1"
@@ -68,8 +68,12 @@ reference:
   - link: https://www.gimmesomeoven.com/hot-and-sour-soup-recipe/
   - link: https://thewoksoflife.com/hot-sour-soup/
 notes: >-
-  Gigi says she likes the eggs being more spread out. I.e, don’t worry too much
-  if there aren’t nice ribbons.
+  Be generous with the chicken broth to make it flavorful. 2 very full
+  tablespoons of chicken mix for 8 cups of water is a good start.
+
+  Gigi used to find the soup very acidic. I increased the amount of chicken broth from 6 to 8 cups, with an extra spoon of corn starch to appropriately thicken.
+
+  Gigi says she likes the eggs being more spread out. I.e, don’t worry too much if there aren’t nice ribbons.
 
   Both soft or firm tofu can work, but Gigi says she prefers firm.
 

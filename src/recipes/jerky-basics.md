@@ -18,10 +18,6 @@ T﻿his is just the basic preparation steps for jerky meat. This applies to all 
 
 Get a good piece of inside round French roast beef (examples at [IGA](https://www.iga.net/en/product/french-roastinside-round/00000_000000027129200000), [Metro](https://www.metro.ca/epicerie-en-ligne/allees/viandes-et-volailles/boeuf-et-veau/rotis-cotes-et-carre/roti-francais-d-interieur-de-ronde-non-barde/p/201491)). Check the weekly flyers, anything above 4$/lb is a ripoff ! *(Price point last verified in December 2022)*
 
-## Make the marinade
-
-Just put together all the ingredients (except the meat of course) in a mason jar. This can be done in advance. Marinade recipes are on other pages.
-
 ## Prep the meat
 
 Two ways to make meat easier to cut (assuming we're starting with a French roast cut) :

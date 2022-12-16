@@ -6,6 +6,10 @@ complexity: 2
 categories:
   - jerky
 origin: non-specific
+ingredients:
+  - name: Beef
+    quantity: "1"
+    measure: kg
 tags: meat
 ---
 T﻿his is just the basic preparation steps for jerky meat. This applies to all recipes.

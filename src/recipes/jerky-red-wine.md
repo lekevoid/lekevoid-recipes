@@ -14,6 +14,10 @@ ingredients:
   - name: Soy sauce
     quantity: "1"
     measure: cup
+  - name: Brown sugar
+    quantity: "3"
+    measure: tbsp
+    comment: Original recipe called for honey. I decided to cheap it down.
   - name: Garlic powder
     quantity: "1"
     measure: tsp
@@ -26,10 +30,9 @@ ingredients:
   - name: Steak spices
     quantity: "1"
     measure: tsp
-  - name: Brown sugar
-    quantity: "3"
-    measure: tbsp
-    comment: Original recipe called for honey. I decided to cheap it down.
+  - name: Pink salt
+    quantity: "1"
+    measure: pinch
 tags: meat
 reference:
   - link: https://healthysubstitute.com/gourmet-homemade-beef-jerky

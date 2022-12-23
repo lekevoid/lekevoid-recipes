@@ -1,6 +1,6 @@
 ---
 date: 2022-12-23T13:16:25.215Z
-title: Jerky - Pepper and Beer
+title: Jerky - Pepper & Beer
 feature_image: /static/img/pepper-beer-jerky.jpg
 time: 480
 complexity: 1

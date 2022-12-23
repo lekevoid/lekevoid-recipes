@@ -1,6 +1,6 @@
 ---
 date: 2022-12-23T12:55:56.298Z
-title: Pork with Apple & Onion
+title: Pork with Apple and Onion
 feature_image: /static/img/pork-apple-onion.jpg
 time: 60
 complexity: 1

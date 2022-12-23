@@ -30,6 +30,9 @@ ingredients:
   - name: Steak spices
     quantity: "1"
     measure: tsp
+  - name: Harissa
+    quantity: 1/2
+    measure: tsp
   - name: Pink salt
     quantity: "1"
     measure: pinch

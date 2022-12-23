@@ -31,6 +31,8 @@ ingredients:
     measure: tbsp
     comment: Original recipe called for honey. I decided to cheap it down.
 tags: meat
+reference:
+  - link: https://healthysubstitute.com/gourmet-homemade-beef-jerky
 ---
 Check out how to choose and prep your meat [here](https://lekevoid-recipes.netlify.app/recipes/jerky-basics/) !
 

@@ -30,6 +30,8 @@ ingredients:
   - name: Cayenne
     quantity: 1/2
     measure: tsp
+    comment: Original recipe calls for pepper flakes, but powder makes it better for
+      me. I should try harissa too.
   - name: Pink salt
     quantity: "1"
     measure: pinch

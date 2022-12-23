@@ -1,8 +1,8 @@
 ---
 date: 2022-12-23T13:11:05.611Z
-title: Jerky - Red Wine
+title: "Jerky : Red Wine"
 feature_image: /static/img/wine-jerky.jpg
-time: 480
+time: ""
 complexity: 1
 categories:
   - jerky

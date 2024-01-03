@@ -9,6 +9,8 @@ items:
     name: Jerky
   - slug: main-course
     name: Main Course
+  - name: Medicine
+    slug: medicine
   - slug: salad
     name: Salad
   - slug: side-dish

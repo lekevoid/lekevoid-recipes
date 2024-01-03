@@ -2,6 +2,8 @@
 date: 2024-01-03T15:23:27.885Z
 title: Ginger-Lemon Tea
 feature_image: /static/img/ginger-tea.jpg
+categories:
+  - medicine
 origin: non-specific
 ingredients:
   - name: Big thumb of fresh ginger
